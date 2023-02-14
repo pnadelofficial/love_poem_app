@@ -2,8 +2,12 @@ import streamlit as st
 import torch
 from transformers import AutoTokenizer, AutoModelForCausalLM
 
-tokenizer = AutoTokenizer.from_pretrained("pnadel/love-poems")
-model = AutoModelForCausalLM.from_pretrained("pnadel/love-poems")
+@st.cache(allow_output_mutation=True)
+def get_model():
+    tokenizer = AutoTokenizer.from_pretrained("pnadel/love-poems")
+    model = AutoModelForCausalLM.from_pretrained("pnadel/love-poems")
+    return tokenizer, model
+tokenizer, model = get_model()
 
 st.title(':heart: Love Poem Generator :heart:')
 st.write(
