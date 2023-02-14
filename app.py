@@ -12,7 +12,7 @@ tokenizer, model = get_model()
 st.title(':heart: Love Poem Generator :heart:')
 st.write(
     """
-    Love is in the air at the Tufts Medofrd/Somerville campus! Use this Love Poem Generator fine-tuned 
+    Love is in the air at the Tufts Medford/Somerville campus! Use this Love Poem Generator fine-tuned 
     from [OpenAI's GPT2 model](https://huggingface.co/gpt2) to compose a Valentine's Day aubade for a lover. 
     You can supply a prompt or get started with nothing. 
     """
